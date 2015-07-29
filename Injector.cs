@@ -84,22 +84,21 @@ namespace JanetterApiKeyInjector
                     return false;
 
             // Extract the bytes of the file preceding this
-            _twapiBefore = new byte[0x1D7];
+            _twapiBefore = new byte[0x21A];
             Array.Copy(twapi, _twapiBefore, _twapiBefore.Length);
 
             // Now, verify + parse the rest of the data
             using (MemoryStream ms = new MemoryStream(twapi))
             {
-                // These two strings directly precede the API keys, and are
+                // This string directly precedes the API key, and is
                 // used as a little safety check:
-                // If we can read them successfully AND read 6 other strings
-                // following these, then it's presumed these are the API keys.
+                // If we can read it successfully AND read 6 other strings
+                // following it, then it's presumed these are the API keys.
 
-                ms.Seek(0x1BD, SeekOrigin.Begin);
-                string verifyA = ReadMarshalString(ms);
-                string verifyB = ReadMarshalString(ms);
+                ms.Seek(0x204, SeekOrigin.Begin);
+                string verify = ReadMarshalString(ms);
 
-                if (verifyA != "get_host" || verifyB != "get_port")
+                if (verify != "initialized_check")
                     return false;
 
 

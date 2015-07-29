@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxDebug = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLoad = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.checkBoxDebug = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -62,6 +62,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Step 1";
+            // 
+            // checkBoxDebug
+            // 
+            this.checkBoxDebug.AutoSize = true;
+            this.checkBoxDebug.Location = new System.Drawing.Point(232, 23);
+            this.checkBoxDebug.Name = "checkBoxDebug";
+            this.checkBoxDebug.Size = new System.Drawing.Size(88, 17);
+            this.checkBoxDebug.TabIndex = 2;
+            this.checkBoxDebug.Text = "Debug Mode";
+            this.checkBoxDebug.UseVisualStyleBackColor = true;
+            this.checkBoxDebug.Visible = false;
             // 
             // label1
             // 
@@ -101,7 +112,7 @@
             this.label3.Size = new System.Drawing.Size(259, 39);
             this.label3.TabIndex = 2;
             this.label3.Text = "Written by Ninji Vahran (@_Ninji)\r\nhttps://github.com/Treeki/JanetterApiKeyInject" +
-    "or\r\nVersion 1 (2014/12/19) - Tested with Janetter 4.3.0.2";
+    "or\r\nVersion 2 (2015/07/29) - Tested with Janetter 4.3.1.0";
             // 
             // groupBox2
             // 
@@ -196,17 +207,6 @@
             // saveFileDialog1
             // 
             this.saveFileDialog1.Filter = "EXE files (*.exe)|*.exe|All files (*.*)|*.*";
-            // 
-            // checkBoxDebug
-            // 
-            this.checkBoxDebug.AutoSize = true;
-            this.checkBoxDebug.Location = new System.Drawing.Point(232, 23);
-            this.checkBoxDebug.Name = "checkBoxDebug";
-            this.checkBoxDebug.Size = new System.Drawing.Size(88, 17);
-            this.checkBoxDebug.TabIndex = 2;
-            this.checkBoxDebug.Text = "Debug Mode";
-            this.checkBoxDebug.UseVisualStyleBackColor = true;
-            this.checkBoxDebug.Visible = false;
             // 
             // MainForm
             // 
